@@ -1,7 +1,7 @@
 import React ,{useState} from "react";
 import Navbar from './componets/Navbar'
 import Footer from './componets/Footer'
-import Routes from './componets/Routes'
+import Link from './componets/Link'
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
        <div className = "bg-gray-400 drak:bg-gray-900 dark:text-gray-200  dark:bg-black min-h-screen"> 
          
          <Navbar darkTheme = {darkTheme} setDarkTheme = {setDarkTheme} />
-         <Routes/>
+         <Link/>
          <Footer/>
  
         </div>
