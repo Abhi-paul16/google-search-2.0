@@ -6,7 +6,7 @@ const baseUrl =  'https://google-search3.p.rapidapi.com/api/v1';
 export const ResultContextProvider  = ({children})=>{
 const [results , setResults] = useState([]);
 const [isLoading , setIsLoading] = useState(false);
-const [searchTerm , setSearchTerm] = useState("Google");
+const [searchTerm , setSearchTerm] = useState("Money hiest");
 
 const getResults = async(type) =>{
     setIsLoading(true)
@@ -16,16 +16,20 @@ const getResults = async(type) =>{
             'x-user-agent': 'desktop',
             'x-proxy-location': 'US',
             'x-rapidapi-host': 'google-search3.p.rapidapi.com',
-            'x-rapidapi-key': '98c93f68b5msh124693c37fdcdf0p157c12jsn320dd3fc421c'
+            'x-rapidapi-key': process.env.REACT_APP_API_KEY,
           }
     })
     const data = await response.json();
     console.log(data)
-    if(type.includes === '/news'){
+    if(type.includes('/news')){
         setResults(data.entries)
-    }
-    setResults(data)
-    setIsLoading(false)
+    }else if(type.includes('/images')){
+        
+        setResults(data.image_results)
+    }else {
+        setResults(data.results)
+        }
+        setIsLoading(false)
 
    
 }
