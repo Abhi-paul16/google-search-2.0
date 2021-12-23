@@ -1,5 +1,5 @@
 # Google Search 2.0
-
+![Search Application](https://s3.amazonaws.com/poly-screenshots.angel.co/Project/23/1307270/9f7f5d2977d057f2ee3a0879ef2f922c-original.png)
 This app is a clone of google search and i made this 
 with the help of @adrianhajdin he build awesome react projects and teach all of them 
 how to build it completely free on youtube if you are interested check out his channel 
