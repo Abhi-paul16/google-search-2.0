@@ -20,7 +20,7 @@ const getResults = async(type) =>{
           }
     })
     const data = await response.json();
-    console.log(data)
+
     if(type.includes('/news')){
         setResults(data.entries)
     }else if(type.includes('/images')){
